@@ -1,0 +1,379 @@
+.header {
+  color: #000;
+}
+
+.header-top {
+  padding-top: 68px;
+  padding-bottom: 83px;
+
+  @media (max-width: 1139px) {
+    width: 100%;
+    padding-top: 61px;
+    padding-bottom: 53px;
+  }
+
+  @media (max-width: 899px) {
+    padding-top: 30px;
+    padding-bottom: 13px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 9px;
+  }
+}
+
+.header__logo {
+  display: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+
+  @media (max-width: 899px) {
+    display: block;
+  }
+}
+
+.header-menu {
+  @media (max-width: 899px) {
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 111;
+    background-color: rgba(37, 73, 116, 0.8);
+    transition: .3s;
+
+    &.open {
+      display: flex;
+    }
+
+    .header-menu__content {
+      padding: 30px 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 320px;
+      background-color: #fff;
+    }
+  }
+}
+
+.nav-icon.active .nav-icon__middle::before {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+.nav-icon.active .nav-icon__middle {
+  background-color: transparent;
+}
+
+.nav-icon.active .nav-icon__middle::after {
+  transform: rotate(45deg);
+}
+
+.header-menu__content a {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #000;
+}
+
+.header-menu__content li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.header-menu__socials {
+  display: flex;
+  width: 270px;
+  margin-bottom: 20px;
+}
+
+.header-menu__content .header-menu__link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #1a71d2;
+}
+
+.header-menu {
+  display: none;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  @media (max-width: 899px) {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 100px;
+
+  @media (max-width: 1139px) {
+    margin-right: 50px;
+  }
+}
+
+.nav__link {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  transition: color 0.3s ease-in;
+
+  @media (max-width: 1139px) {
+    font-size: 18px;
+  }
+}
+
+.nav__link:hover {
+  color: $accent-color;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  column-gap: 26px;
+
+  @media (max-width: 899px) {
+    display: none;
+  }
+}
+
+.nav-icon {
+  display: none;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  @media (max-width: 899px) {
+    position: fixed;
+    display: flex;
+    z-index: 999;
+    right: 15px;
+  }
+}
+
+.nav-icon__middle {
+  position: relative;
+  width: 30px;
+  height: 5px;
+  background-color: #000;
+
+  &::before, &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 30px;
+      height: 5px;
+      transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+      background-color: #000;
+  }
+
+  &::before {
+      top: -10px;
+  }
+
+  &::after {
+      top: 10px;
+  }
+}
+
+.linkedin {
+  fill: #212121;
+  transition: fill 0.3s ease-in;
+}
+
+.linkedin:hover {
+  fill: $accent-color;
+}
+
+.github {
+  fill: #212121;
+  transition: fill 0.3s ease-in;
+}
+
+.github:hover {
+  fill: $accent-color;
+}
+
+.header-content__row {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+
+  &__text {
+    padding-top: 19px;
+
+    @media (max-width: 1139px) {
+      padding-top: 8px;
+    }
+
+    @media (max-width: 899px) {
+      padding-top: 62px;
+    }
+
+    @media (max-width: 767px) {
+      padding-top: 25px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 78px;
+    line-height: 1;
+
+    @media (max-width: 1139px) {
+      font-size: 58px;
+    }
+
+    @media (max-width: 899px) {
+      font-size: 42px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 32px;
+    }
+  }
+
+  &__desc {
+    max-width: 540px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.6;
+    margin-top: 30px;
+
+    @media (max-width: 1139px) {
+      max-width: unset;
+      width: 400px;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 899px) {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.grad-border {
+  display: inline;
+  background-position: center bottom 10px;
+  background-repeat: no-repeat;
+  background-size: 100% 10px;
+  background-image: linear-gradient(to right, #fbdc4d, #fbdc4d);
+}
+
+.header-content__btns {
+  display: flex;
+  margin-top: 33px;
+
+  @media (max-width: 1139px) {
+    margin-top: 28px;
+  }
+
+  @media (max-width: 899px) {
+    display: none;
+  }
+}
+
+.header .btn--special {
+  margin-right: 20px;
+}
+
+.btn--special {
+  background-color: $accent-color;
+  transition: opacity 0.3s ease-in;
+}
+
+.btn--special:hover {
+  opacity: 0.7;
+}
+
+.header-content__img {
+  width: 475px;
+  box-shadow: 40px 40px rgba(255, 255, 255, 0.5);
+
+  @media (max-width: 1139px) {
+    width: 376px;
+  }
+
+  @media (max-width: 899px) {
+    width: 290px;
+    margin-top: 20px;
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 9px;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header-content__description {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+.header-content__banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -150px;
+  z-index: -1;
+
+  @media (max-width: 1139px) {
+    margin-top: -82px;
+  }
+
+  @media (max-width: 899px) {
+    margin-top: -106px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 1px;
+  }
+}
+
+.header-content__banner img {
+  object-fit: cover;
+}

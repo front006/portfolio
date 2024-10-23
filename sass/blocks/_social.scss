@@ -1,0 +1,48 @@
+.socials {
+    display: flex;
+}
+
+.social__icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.social__icon:not(:last-child) {
+    margin-right: 20px;
+}
+
+.telegram {
+
+    @media (max-width: 899px) {
+      width: 38px;
+      height: 38px;
+    }
+}
+
+.vk {
+
+    @media (max-width: 899px) {
+      width: 38px;
+      height: 38px;
+    }
+}
+
+.facebook {
+
+    @media (max-width: 899px) {
+      width: 38px;
+      height: 38px;
+    }
+}
+
+.insta {
+
+    @media (max-width: 899px) {
+      width: 38px;
+      height: 38px;
+    }
+}
+
+.whatsapp {
+}

@@ -1,0 +1,242 @@
+.contacts {
+    padding-bottom: 90px;
+    background-image: linear-gradient(#f5fbff, #f4f8f9);
+
+    @media (max-width: 1139px) {
+      padding-bottom: 69px;
+    }
+
+    @media (max-width: 899px) {
+      padding-bottom: 48px;
+    }
+
+    @media (max-width: 767px) {
+      padding-bottom: 41px;
+    }
+}
+
+.contacts-header {
+    text-align: center;
+    margin-bottom: 66px;
+
+    @media (max-width: 1139px) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 899px) {
+      margin-bottom: 19px;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 23px;
+    }
+
+}
+
+.contacts-wrapper {
+    display: flex;
+
+    @media (max-width: 1139px) {
+      column-gap: 76px;
+    }
+
+    @media (max-width: 899px) {
+      column-gap: 113px;
+    }
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+}
+
+.contacts-info {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  margin-top: -2px;
+
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+}
+
+.contacts__list {
+    margin-bottom: 40px;
+
+    @media (max-width: 1139px) {
+      margin-bottom: 27px;
+    }
+
+    @media (max-width: 899px) {
+      margin-bottom: 10px;
+    }
+}
+
+.contacts__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 22px;
+
+      @media (max-width: 1139px) {
+        margin-bottom: 13px;
+      }
+
+      @media (max-width: 767px) {
+        margin-bottom: 6px;
+      }
+    }
+
+    @media (max-width: 899px) {
+      display: block;
+    }
+}
+
+.contacts__item span {
+    min-width: 126px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-right: 65px;
+
+    @media (max-width: 1139px) {
+      min-width: 80px;
+      font-size: 18px;
+      margin-right: 40px;
+    }
+
+    @media (max-width: 899px) {
+      font-size: 16px;
+      margin-right: 80px;
+    }
+
+    @media (max-width: 767px) {
+      margin-right: 99px;       
+    }
+}
+
+.phone {
+    color: rgb(26, 113, 210);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.contacts-social {
+  order: -1;
+    width: 360px;
+
+    @media (max-width: 899px) {
+      width: 271px;
+    }
+
+    @media (max-width: 767px) {
+      display: flex;
+      order: -1;
+      margin-top: 20px;
+    }
+}
+
+.contact-text {
+    max-width: 538px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+
+    @media (max-width: 1139px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 899px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 767px) {
+      width: 290px;
+      margin-bottom: 20px;
+    }
+}
+
+.contact-form {
+  position: relative;
+  width: 570px;
+  padding-top: 48px;
+  padding-left: 78px;
+  padding-right: 24px;
+  padding-bottom: 64px;
+  background-color: #fff;
+  box-shadow: 0 20px 100px -10px rgba(160, 206, 237, 0.75);
+
+  @media (max-width: 767px) {
+    width: 290px;
+    padding: 15px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 280px;
+    height: 243px;
+    top: -112px;
+    right: -123px;
+    background-image: url(../img/contact-icon.png);
+
+    @media (max-width: 1139px) {
+      right: -1px;
+      bottom: -1px;
+    }
+
+    @media (max-width: 899px) {
+      display: none;
+    }
+  }
+}
+
+.form-item {
+  position: relative;
+  margin-bottom: 30px;
+
+  &:not(:last-child) {
+    border-bottom: 2px solid #e5e5e5;
+  }
+
+}
+
+.form-field {
+  width: 440px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+
+  @media (max-width: 767px) {
+    width: 260px;
+  }
+}
+
+.fake-placeholder {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  color: #9d9d9d;
+  pointer-events: none;
+
+  &.active,&:focus {
+    position: absolute;
+    top: -15px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    color: #eca73f;
+  }
+}
+
+.form__btn {
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}

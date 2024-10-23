@@ -1,0 +1,42 @@
+.portfolio {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-image: linear-gradient(#f5fbff, #f4f8f9);
+
+    @media (max-width: 1139px) {
+      padding-top: 40px;
+      padding-bottom: 44px;
+    }
+
+    @media (max-width: 899px) {
+      padding-top: 52px;
+    }
+
+    @media (max-width: 767px) {
+      padding-top: 48px;
+    }
+}
+
+.mix-block {
+  margin-top: 30px;
+}
+
+.portfolio-cards {
+    row-gap: 51px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: 1139px) {
+      margin-top: 40px;
+      row-gap: 40px;
+      column-gap: 31px;
+      justify-content: unset;
+    }
+
+    @media (max-width: 899px) {
+      margin-top: 30px;
+      column-gap: 30px;
+      row-gap: 20px;
+    }
+}
